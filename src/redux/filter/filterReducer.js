@@ -4,8 +4,7 @@ import { filterContacts } from './filterActions';
 const filter = '';
 
 const filterReducer = createReducer(filter, {
-  // eslint-disable-next-line no-return-assign
-  [filterContacts]: (state, { payload }) => (state = payload),
+  [filterContacts]: (state, { payload }) => payload,
 });
 
 export default filterReducer;

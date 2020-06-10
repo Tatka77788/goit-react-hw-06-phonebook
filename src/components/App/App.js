@@ -45,13 +45,6 @@ export default class App extends Component {
     }, 1500);
   };
 
-  filterContacts = () => {
-    const { contacts, filter } = this.props;
-    return contacts.filter(({ name }) =>
-      name.toLowerCase().includes(filter.toLowerCase()),
-    );
-  };
-
   render() {
     const { contacts } = this.props;
     const { isVisible, message } = this.state;
@@ -77,7 +70,7 @@ export default class App extends Component {
         >
           <Filter />
         </CSSTransition>
-        <ContactList contacts={this.filterContacts()} />
+        <ContactList />
       </div>
     );
   }
